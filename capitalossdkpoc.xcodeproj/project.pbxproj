@@ -8,11 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		DCB6A5D92BBEC44700761A58 /* capitalossdkpoc.h in Headers */ = {isa = PBXBuildFile; fileRef = DCB6A5D82BBEC44700761A58 /* capitalossdkpoc.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DCC659B22BC27E0E00681E7B /* SDKInitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC659B12BC27E0E00681E7B /* SDKInitViewController.swift */; };
+		DCC659B42BC27E4800681E7B /* SDKServerResponses.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC659B32BC27E4800681E7B /* SDKServerResponses.swift */; };
+		DCC659B62BC27E5800681E7B /* SDKServerCommunicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC659B52BC27E5800681E7B /* SDKServerCommunicator.swift */; };
+		DCC659B82BC27E7400681E7B /* SDKPlaidLinkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC659B72BC27E7300681E7B /* SDKPlaidLinkViewController.swift */; };
+		DCC659BB2BC27ED200681E7B /* LinkKit in Frameworks */ = {isa = PBXBuildFile; productRef = DCC659BA2BC27ED200681E7B /* LinkKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		DCB6A5D52BBEC44700761A58 /* capitalossdkpoc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = capitalossdkpoc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCB6A5D82BBEC44700761A58 /* capitalossdkpoc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = capitalossdkpoc.h; sourceTree = "<group>"; };
+		DCC659B12BC27E0E00681E7B /* SDKInitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDKInitViewController.swift; sourceTree = "<group>"; };
+		DCC659B32BC27E4800681E7B /* SDKServerResponses.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDKServerResponses.swift; sourceTree = "<group>"; };
+		DCC659B52BC27E5800681E7B /* SDKServerCommunicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDKServerCommunicator.swift; sourceTree = "<group>"; };
+		DCC659B72BC27E7300681E7B /* SDKPlaidLinkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDKPlaidLinkViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -20,6 +29,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCC659BB2BC27ED200681E7B /* LinkKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,6 +56,10 @@
 			isa = PBXGroup;
 			children = (
 				DCB6A5D82BBEC44700761A58 /* capitalossdkpoc.h */,
+				DCC659B12BC27E0E00681E7B /* SDKInitViewController.swift */,
+				DCC659B32BC27E4800681E7B /* SDKServerResponses.swift */,
+				DCC659B52BC27E5800681E7B /* SDKServerCommunicator.swift */,
+				DCC659B72BC27E7300681E7B /* SDKPlaidLinkViewController.swift */,
 			);
 			path = capitalossdkpoc;
 			sourceTree = "<group>";
@@ -78,6 +92,9 @@
 			dependencies = (
 			);
 			name = capitalossdkpoc;
+			packageProductDependencies = (
+				DCC659BA2BC27ED200681E7B /* LinkKit */,
+			);
 			productName = capitalossdkpoc;
 			productReference = DCB6A5D52BBEC44700761A58 /* capitalossdkpoc.framework */;
 			productType = "com.apple.product-type.framework";
@@ -93,6 +110,7 @@
 				TargetAttributes = {
 					DCB6A5D42BBEC44700761A58 = {
 						CreatedOnToolsVersion = 15.3;
+						LastSwiftMigration = 1530;
 					};
 				};
 			};
@@ -105,6 +123,9 @@
 				Base,
 			);
 			mainGroup = DCB6A5CB2BBEC44600761A58;
+			packageReferences = (
+				DCC659B92BC27ED200681E7B /* XCRemoteSwiftPackageReference "plaid-link-ios" */,
+			);
 			productRefGroup = DCB6A5D62BBEC44700761A58 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -129,6 +150,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCC659B22BC27E0E00681E7B /* SDKInitViewController.swift in Sources */,
+				DCC659B62BC27E5800681E7B /* SDKServerCommunicator.swift in Sources */,
+				DCC659B42BC27E4800681E7B /* SDKServerResponses.swift in Sources */,
+				DCC659B82BC27E7400681E7B /* SDKPlaidLinkViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,6 +289,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -287,6 +313,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -296,6 +323,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -346,6 +374,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DCC659B92BC27ED200681E7B /* XCRemoteSwiftPackageReference "plaid-link-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/plaid/plaid-link-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.3.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DCC659BA2BC27ED200681E7B /* LinkKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DCC659B92BC27ED200681E7B /* XCRemoteSwiftPackageReference "plaid-link-ios" */;
+			productName = LinkKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DCB6A5CC2BBEC44600761A58 /* Project object */;
 }

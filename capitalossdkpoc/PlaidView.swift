@@ -6,3 +6,13 @@
 //
 
 import Foundation
+import SwiftUI
+
+public struct PlaidView: View {
+    
+    public init(){}
+    
+    public var body: some View {
+        Text("Hello!")
+    }
+}
